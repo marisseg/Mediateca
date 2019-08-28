@@ -82,10 +82,17 @@ public class Implementa {
 		librosregistrados.add(lib4);
 		librosregistrados.add(lib5);
 
-		
+		byte contador=0;
+		float preciototal=0f;
 		for (Libro libro : librosregistrados) {
 			System.out.println(libro.id + " " + libro.titulo + " " + libro.autor + " " + libro.precio + " " + libro.nropag + " "  + libro.nroisbn );
+			contador++;
+			preciototal = preciototal + libro.precio;
 		}
+		System.out.println(" Libros prestados: " + contador);
+		System.out.println(" Monto acumulado: " + preciototal);
+
+
 		
 		System.out.println();
 		System.out.println();
@@ -108,6 +115,7 @@ public class Implementa {
 		for (Cintaaudio cintaaudio : audioslista) {
 			System.out.println(cintaaudio.id + " " + cintaaudio.titulo + " " + cintaaudio.autor + " " + cintaaudio.precio + " " + cintaaudio.lugar + " "  + cintaaudio.duracion );
 		}
+		
 		
 		System.out.println();
 		System.out.println();
